@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
             jump = true;
         }
 
+        // set Crouch in project settings
         // if (Input.GetButtonDown("Crouch")) {
         //     crouch = true;
         // } else if (Input.GetButtonUp("Crouch")) {
