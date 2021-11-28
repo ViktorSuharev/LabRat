@@ -6,6 +6,7 @@ public class FallingOnJumpTile : MonoBehaviour {
     Rigidbody2D rb;
     float fallingDelaySec = 0.5f;
     float destroyDelaySec = 2f;
+    float verticalVelocityThreshold = -5f;
 
     // Start is called before the first frame update
     void Start() {
@@ -14,7 +15,8 @@ public class FallingOnJumpTile : MonoBehaviour {
 
     // Update is called once per frame
     void OnCollisionEnter2D(Collision2D col) {
-        if (col.gameObject.name.Equals("Player")) {
+        Debug.Log(col.relativeVelocity.y);
+        if (col.gameObject.name.Equals("Player") && col.relativeVelocity.y < verticalVelocityThreshold) {
             Invoke("DropPlatform", fallingDelaySec);
             Destroy(gameObject, destroyDelaySec);
         }
