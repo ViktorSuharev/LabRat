@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FallingOnJumpTile : MonoBehaviour {
     Rigidbody2D rb;
-    float fallingDelaySec = 0.5f;
-    float destroyDelaySec = 2f;
-    float verticalVelocityThreshold = -5f;
+    public float fallingDelaySec = 0.5f;
+    public float destroyDelaySec = 2f;
+    public float verticalVelocityThreshold = -5f;
 
     // Start is called before the first frame update
     void Start() {
